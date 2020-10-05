@@ -1,4 +1,4 @@
-rule obfuscated-hiddenPHP
+rule obfuscatedhiddenPHP
 {
     strings:
         $st1 = "basename" ascii wide
