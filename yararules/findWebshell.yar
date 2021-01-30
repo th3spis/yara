@@ -7,5 +7,5 @@ rule findWebshell
 		$st4 = "oxb*dugtril4_s09nm7ae#"
 		$st5 = /(\$[0-9a-zA-Z]{4,6}\[[0-9]{1,2}\].){3}/ 	// match example: $qxbwt[3].$qbcge[52].$avwsq[44] 
     condition:
-        $st1 or $st2 or $st3 or $st4 or $st5
+        any of them
 }
