@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Creates a yara rule file with the strings of the input file (one yara string per line)
+
 filename="${1//.*}_yaralized.yar"
 
 echo "rule ${1//.*}rule" > $filename
