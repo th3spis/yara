@@ -1,19 +1,20 @@
 #!/bin/bash
 
-#Creates a yara rule file with the strings of the input file (one yara string per line)
+filename="${1//.*}_yaralized.yar"
+echo $filename
 
-echo "rule $1rule" >> $1_yaralized.yar
-echo "{" >> $1_yaralized.yar
-echo -e "\tstrings:" >> $1_yaralized.yar
+echo "rule $1rule" > $filename
+echo "{" >> $filename
+echo -e "\tstrings:" >> $filename
 
 i=0
 
 while read line
 do
-	echo -e "\t\t\$st$i = \"$line\" ascii wide" >> $1_yaralized.yar
+	echo -e "\t\t\$st$i = \"$line\" ascii wide" >> $filename
  	i=$((i + 1))
 done < $1
 
-echo -e "\tcondition:" >> $1_yaralized.yar
-echo -e "\t\tall of them" >> $1_yaralized.yar
-echo "}" >> $1_yaralized.yar
+echo -e "\tcondition:" >> $filename
+echo -e "\t\tall of them" >> $filename
+echo "}" >> $filename
