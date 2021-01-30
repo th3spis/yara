@@ -4,13 +4,13 @@
 
 echo "rule $1rule" >> $1_yaralized.yar
 echo "{" >> $1_yaralized.yar
-echo -e "\tstrings:"
+echo -e "\tstrings:" >> $1_yaralized.yar
 
 i=0
 
 while read line
 do
-	echo -e "\t\t\$st$i = \"$line\"" >> $1_yaralized.yar
+	echo -e "\t\t\$st$i = \"$line\" ascii wide" >> $1_yaralized.yar
  	i=$((i + 1))
 done < $1
 
