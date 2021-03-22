@@ -2,6 +2,7 @@
 
 #Creates a yara rule file with the strings of the input file (one yara string per line)
 
+#get the input name until it finds a "."
 filename="${1//.*}_yaralized.yar"
 
 echo "rule ${1//.*}rule" > $filename
