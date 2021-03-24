@@ -1,5 +1,9 @@
 rule findBadIcoInclude
 {
+    meta:
+        description = Specific webshell seen in the wild
+        author = th3sp1s
+        date = 2020
     strings:
         $inc = "@include "
 	$st0 = ".\\151c\\157"
@@ -25,6 +29,10 @@ rule findBadIcoInclude
 
 rule badInclude
 {
+    meta:
+        description = Specific webshell pattern seen in the wild
+        author = th3sp1s
+        date = 2020
     strings:
         $st1 = /\/\*([0-9a-zA-Z]{4,6})\*\/\n\n@include.*\n\n\/\*([0-9a-zA-Z]{4,6})\*\//
     condition:
@@ -38,3 +46,21 @@ example match
 
 		/*5e4ef*/
 */
+
+
+
+rule suspiciousPattern
+{
+    meta:
+        description = Specific webshell pattern seen in the wild
+        author = th3sp1s
+        date = 2020
+    strings:
+        $st1 = "NGFP1eqf9hiCIcKwHFj7ClIQh2Bd1V6bIthVZC1Jo4k2QSvzR2674raF"
+		$st2 = "1Hbzs2w3S7YffAHTrZeabr3Y9DrhJ8v"
+		$st3 = "eval (gzinflate(base64_decode"
+		$st4 = "oxb*dugtril4_s09nm7ae#"
+		$st5 = /(\$[0-9a-zA-Z]{4,6}\[[0-9]{1,2}\].){3}/ 	// match example: $qxbwt[3].$qbcge[52].$avwsq[44] 
+    condition:
+        any of them
+}
