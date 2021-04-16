@@ -8,7 +8,6 @@ filename="${1//.*}_yaralized.yar"
 #remove all empty lines or only-white-spaces lines
 sed -i '/^[[:space:]]*$/d' $1
 
-
 echo "rule ${1//.*}rule" > $filename
 echo "{" >> $filename
 echo -e "\tstrings:" >> $filename
@@ -24,10 +23,8 @@ done < $1
 
 echo -e "\tcondition:" >> $filename
 
-
 if [ "$2" = "-any" ] ; then
 	echo -e "\t\tany of them" >> $filename
-
 else 
 	echo -e "\t\tall of them" >> $filename
 fi
