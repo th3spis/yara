@@ -2,7 +2,7 @@
 
 #Test all yara rules located inside $yarapath dir and subdirs against current directory files or specific given path
 
-yarapath="/home/th3sp1s/00-utils/yararules/"
+yarapath="/path/"
 
 
 if [ "$#" -gt 1 ]  ; then
