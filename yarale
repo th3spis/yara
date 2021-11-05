@@ -4,6 +4,8 @@
 
 yarapath="/path/"
 
+nyarafiles=$(find $yarapath -type f -print | wc -l)
+echo "Total $nyarafiles yaras"
 
 if [ "$#" -gt 1 ]  ; then
 	echo 
