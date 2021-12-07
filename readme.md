@@ -4,6 +4,8 @@ throwable directory is meant to containt a compilation of public yara rules that
 
 yarale throws all yaras from a specific location, against a specified location or current dir if none is given
 
+<h2> Yaralizer </h2>
+
 yaralizer will allow you to create quick and basic yara rules based on a text file with strings, or a quick template to start working on your yara rule
 
 
@@ -36,7 +38,7 @@ yaralizer will allow you to create quick and basic yara rules based on a text fi
 <p><span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>yaralizer.py -p 8 -any -o my_yara.yar</p>
 <p><span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>yaralizer.py -p 5 -some 3 -n my_rule -o my_yara.yar</p>
   
-
+<p></p>
 
 For example, for the given the following text file:
 
