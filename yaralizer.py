@@ -4,6 +4,7 @@
 
 
 import argparse
+import os
 from argparse import RawTextHelpFormatter
 
 parser = argparse.ArgumentParser(
@@ -24,7 +25,7 @@ exclusive_3 = parser.add_mutually_exclusive_group()
 exclusive_1.add_argument('-f', dest='strings_file', help = 'Specify a file with strings in every line which will be used to build the yara rule.')
 exclusive_1.add_argument('-p', dest='n_str', type=int, help = 'Create an empty yara rule template with n_str strings.')
 
-parser.add_argument('-d', help = 'Delete strings_file after creation of yara rule. (Only useful with [-f strings_file] option.)', action='store_true')
+parser.add_argument('-d', dest='delete', help = 'Delete strings_file after creation of yara rule. (Only useful with [-f strings_file] option.)', action='store_true')
 parser.add_argument('-n', dest='rule_name', help = 'Give a specific name for the yara rule inside the file. Default [strings_file]_rule.)')
 parser.add_argument('-m', dest='mods', type=str, help = 'Add yara modifiers for the strings, separated by comma (ascii, wide, nocase...). If "def" is given as value, use the following flags: ascii wide nocase.')
 
@@ -103,7 +104,10 @@ else:
 		# Read specified file containing strings
 		with open(str_filename) as file:
 			lines = file.readlines()
-		
+
+		if args_namespace.delete:
+			os.remove(str_filename)
+
 		rule_def_str = "rule " + rulename + " { \n\tstrings:\n"
 		for stringo in lines:
 			rule_def_str += "\t\t$st" + str(str_n) + " = \"" + stringo[:-1] + "\" "
