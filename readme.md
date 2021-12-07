@@ -8,7 +8,7 @@ yaralizer will allow you to create quick and basic yara rules based on a text fi
 
 For example, for the given the following text file:
 
-
+<img src=example_pics/scr1.png>
 
 Yaralizer could create a yara rule like this:
 
