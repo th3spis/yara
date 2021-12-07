@@ -6,16 +6,15 @@ yarale throws all yaras from a specific location, against a specified location o
 
 yaralizer will allow you to create quick and basic yara rules based on a text file with strings, or a quick template to start working on your yara rule
 
-<code>
 
-<code><p>~$ yaralizer.py</p>
-<code><p><br></p>
-<code><p>Bad arguments:</p>
-<code><p>&nbsp; &nbsp; Either -f or -p otions are required, and none have been specified.</p>
-<code><p><br></p>
-<code><p>usage: yaralizer.py [-h] [-f STRINGS_FILE | -p N_STR] [-d] [-n RULE_NAME]</p>
-<code><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [-m MODS] [-all | -any | -some N_OF_THEM]</p>
-<code><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [-o RULE_FILE | -nofile]</p>
+<p>~$ yaralizer.py</p>
+<p><br></p>
+<p>Bad arguments:</p>
+<p>&nbsp; &nbsp; Either -f or -p otions are required, and none have been specified.</p>
+<p><br></p>
+<p>usage: yaralizer.py [-h] [-f STRINGS_FILE | -p N_STR] [-d] [-n RULE_NAME]</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [-m MODS] [-all | -any | -some N_OF_THEM]</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [-o RULE_FILE | -nofile]</p>
 <p><br></p>
 <p>Create quick yara rules. Either -f or -p options are required.</p>
 <p><br></p>
@@ -40,7 +39,6 @@ yaralizer will allow you to create quick and basic yara rules based on a text fi
 <p><span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>yaralizer.py -p 8 -any -o my_yara.yar</p>
 <p><span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>yaralizer.py -p 5 -some 3 -n my_rule -o my_yara.yar</p>
   
-</code>
 
 
 For example, for the given the following text file:
