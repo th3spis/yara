@@ -12,4 +12,5 @@ For example, for the given the following text file:
 
 Yaralizer could create a yara rule like this:
 
+<img src=example_pics/scr2.png>
 
