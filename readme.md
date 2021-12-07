@@ -11,7 +11,7 @@ yarale throws all yaras from a specific location, against a specified location o
 yaralizer will allow you to create quick and basic yara rules based on a text file with strings, or a quick template to start working on your yara rule
 
 
-<p>~$ yaralizer.py --help</p>
+<code><p>~$ yaralizer.py --help</p></code>
 <p><br></p>
 <p>usage: yaralizer.py [-h] [-f STRINGS_FILE | -p N_STR] [-d] [-n RULE_NAME]</p>
 <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [-m MODS] [-all | -any | -some N_OF_THEM]</p>
