@@ -2,6 +2,8 @@
 
 throwable directory is meant to containt a compilation of public yara rules that are throuwable outside VirusTotal, since most of public yaras are defined for VT
 
+<h2> Yarale </h2>
+
 yarale throws all yaras from a specific location, against a specified location or current dir if none is given
 
 <h2> Yaralizer </h2>
