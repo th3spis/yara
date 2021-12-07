@@ -4,5 +4,12 @@ throwable directory is meant to containt a compilation of public yara rules that
 
 yarale throws all yaras from a specific location, against a specified location or current dir if none is given
 
-yaralizer reads from a text file and creates a yararule taking each line as a string for the rule
+yaralizer will allow you to create quick and basic yara rules based on a text file with strings, or a quick template to start working on your yara rule
+
+For example, for the given the following text file:
+
+
+
+Yaralizer could create a yara rule like this:
+
 
