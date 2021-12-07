@@ -1,4 +1,4 @@
-<h1>YARATORIUM: An easy yara labo to save you some time</h1>
+<h1>YARATORIUM: Yara utilities to save you some time</h1>
 
 throwable directory is meant to containt a compilation of public yara rules that are throuwable outside VirusTotal, since most of public yaras are defined for VT
 
