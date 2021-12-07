@@ -7,8 +7,38 @@ yarale throws all yaras from a specific location, against a specified location o
 yaralizer will allow you to create quick and basic yara rules based on a text file with strings, or a quick template to start working on your yara rule
 
 <code>
-<div style="white-space:pre-wrap;font-family:Monospace;color:#d8dee9;background-color:#303841;-moz-tab-size:2;tab-size:2;">th3sp1s@thespialidonte:~$ yaralizer.py<br><br>Bad arguments:<br>	Either -f or -p otions are required, and none have been specified.<br><br>usage: yaralizer.py [-h] [-f STRINGS_FILE | -p N_STR] [-d] [-n RULE_NAME]<br>                    [-m MODS] [-all | -any | -some N_OF_THEM]<br>                    [-o RULE_FILE | -nofile]<br><br>Create quick yara rules. Either -f or -p options are required.<br><br>optional arguments:<br>  -h, --help       show this help message and exit<br>  -f STRINGS_FILE  Specify a file with strings in every line which will be used to build the yara rule.<br>  -p N_STR         Create an empty yara rule template with n_str strings.<br>  -d               Delete strings_file after creation of yara rule. (Only useful with [-f strings_file] option.)<br>  -n RULE_NAME     Give a specific name for the yara rule inside the file. Default [strings_file]_rule.)<br>  -m MODS          Add yara modifiers for the strings, separated by comma (ascii, wide, nocase...). If "def" is given as value, use the following flags: ascii wide nocase.<br>  -all             Select "any of them" as contition. This will be the default option if none given.<br>  -any             Select "all of them" as condition.<br>  -some N_OF_THEM  Select "n_of_them of them" as condition.<br>  -o RULE_FILE     Output file name. Default [strings_file]_yaralized.yar)<br>  -nofile          Do not generate a file. Print the rule instead.<br><br>Examples of use:<br>	yaralizer.py -f my_strings_file<br>	yaralizer.py -f my_strings.txt -d -all -o my_yara.yar<br>	yaralizer.py -f my_strings.txt -some 3<br>	yaralizer.py -p 5 -m base64,base64wide<br>	yaralizer.py -p 8 -any -o my_yara.yar<br>	yaralizer.py -p 5 -some 3 -n my_rule -o my_yara.yar</div>
-  
+
+  <p>~$ yaralizer.py</p>
+<p><br></p>
+<p>Bad arguments:</p>
+<p>&nbsp; &nbsp; Either -f or -p otions are required, and none have been specified.</p>
+<p><br></p>
+<p>usage: yaralizer.py [-h] [-f STRINGS_FILE | -p N_STR] [-d] [-n RULE_NAME]</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [-m MODS] [-all | -any | -some N_OF_THEM]</p>
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [-o RULE_FILE | -nofile]</p>
+<p><br></p>
+<p>Create quick yara rules. Either -f or -p options are required.</p>
+<p><br></p>
+<p>optional arguments:</p>
+<p>&nbsp; -h, --help &nbsp; &nbsp; &nbsp; show this help message and exit</p>
+<p>&nbsp; -f STRINGS_FILE &nbsp;Specify a file with strings in every line which will be used to build the yara rule.</p>
+<p>&nbsp; -p N_STR &nbsp; &nbsp; &nbsp; &nbsp; Create an empty yara rule template with n_str strings.</p>
+<p>&nbsp; -d &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Delete strings_file after creation of yara rule. (Only useful with [-f strings_file] option.)</p>
+<p>&nbsp; -n RULE_NAME &nbsp; &nbsp; Give a specific name for the yara rule inside the file. Default [strings_file]_rule.)</p>
+<p>&nbsp; -m MODS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Add yara modifiers for the strings, separated by comma (ascii, wide, nocase...). If &quot;def&quot; is given as value, use the following flags: ascii wide nocase.</p>
+<p>&nbsp; -all &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Select &quot;any of them&quot; as contition. This will be the default option if none given.</p>
+<p>&nbsp; -any &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Select &quot;all of them&quot; as condition.</p>
+<p>&nbsp; -some N_OF_THEM &nbsp;Select &quot;n_of_them of them&quot; as condition.</p>
+<p>&nbsp; -o RULE_FILE &nbsp; &nbsp; Output file name. Default [strings_file]_yaralized.yar)</p>
+<p>&nbsp; -nofile &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Do not generate a file. Print the rule instead.</p>
+<p><br></p>
+<p>Examples of use:</p>
+<p><span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>yaralizer.py -f my_strings_file</p>
+<p><span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>yaralizer.py -f my_strings.txt -d -all -o my_yara.yar</p>
+<p><span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>yaralizer.py -f my_strings.txt -some 3</p>
+<p><span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>yaralizer.py -p 5 -m base64,base64wide</p>
+<p><span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>yaralizer.py -p 8 -any -o my_yara.yar</p>
+<p><span style="white-space:pre;">&nbsp; &nbsp;&nbsp;</span>yaralizer.py -p 5 -some 3 -n my_rule -o my_yara.yar</p>
   
 </code>
 
