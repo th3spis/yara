@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# OLD bash version. Now using yaralizer.py
 #Creates a yara rule file with the strings of the input file (one yara string per line)
 
 #get the input name until it finds a "."
