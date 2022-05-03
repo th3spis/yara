@@ -132,7 +132,7 @@ else:
 		if args_namespace.rule_file is not None:
 			rule_filename = args_namespace.rule_file
 		else:
-			rule_filename = 'yaralizer.yar'
+			rule_filename = 'yaralizer_ruleset.yar'
 
 		# Parse rule name for the definition of the generated yara rule
 		if args_namespace.rule_name is not None:
